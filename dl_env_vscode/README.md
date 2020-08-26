@@ -7,8 +7,20 @@ $ docker build --rm -t dl_env_vscode \
 ```
 
 # Run docker container
+Normal using
 ```bash
 $ docker run -it -d --name dl_vscode  dl_env_vscode
+```
+Display image to local machine.
+```bash
+$ docker run -it -d -e="DISPLAY" \
+    -v ~/DB/ccy/DroneRF/AR\ drone/:/home/chu/project/ \
+    -v="/etc/group:/etc/group:ro" \
+    -v="/etc/passwd:/etc/passwd:ro" \
+    -v="/etc/shadow:/etc/shadow:ro" \
+    -v="/etc/sudoers.d:/etc/sudoers.d:ro" \
+    -v="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+    --name drone_env  dl_env_vscode
 ```
 
 # Set vscode
