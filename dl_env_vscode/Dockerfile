@@ -2,8 +2,8 @@ From tensorflow/tensorflow:1.14.0-gpu-py3
 
 COPY requirements.txt /opt/app/requirements.txt
 ENV TERM=xterm-256color
-#ARG APT_INSTALL="python3-tk"
-ARG APT_INSTALL="sudo"
+ARG DEBIAN_FRONTEND=noninteractive
+ARG APT_INSTALL="sudo python3-tk"
 ARG USER_ID
 ARG GROUP_ID
 ARG USER
