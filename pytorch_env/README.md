@@ -25,5 +25,6 @@ $ docker run --gpus all -it -d -e="DISPLAY" \
     -v="/etc/shadow:/etc/shadow:ro" \
     -v="/etc/sudoers.d:/etc/sudoers.d:ro" \
     -v="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+    --shm-size=32G \
     --name drone_env pytorch_env
 ```
