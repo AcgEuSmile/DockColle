@@ -1,6 +1,8 @@
 matplotlib==2.2.5
 pip==20.1.1
+pillow
+tqdm===4.38.0
 sklearn
-numpy==1.16.0
-pylint
+numpy==1.17.2
+pycodestyle==2.6.0
 autopep8
